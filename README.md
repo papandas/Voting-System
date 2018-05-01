@@ -1,6 +1,8 @@
 # Voting-System
 Ethereum based decentralized voting system. Blockchain Technology.
 
+Click here to view demo [Go To Demo](http://htmlpreview.github.io/?https://github.com/papandas/Voting-System/blob/master/src/index.html).
+
 Truffle
 
 Blockchain is a network as well as database
