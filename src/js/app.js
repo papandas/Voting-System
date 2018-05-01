@@ -24,7 +24,7 @@ App = {
     $.getJSON("Election.json", function(election){
       App.contracts.Election = TruffleContract(election);
       App.contracts.Election.setProvider(App.web3Provider);
-      App.listenForEvents();
+      //App.listenForEvents();
       return App.render();
     })
   },
@@ -63,8 +63,8 @@ App = {
       var candidatesResults = $("#candidatesResults");
       candidatesResults.empty();
 
-      var candidatesSelect = $("#candidatesSelect");
-      candidatesSelect.empty();
+      //var candidatesSelect = $("#candidatesSelect");
+      //candidatesSelect.empty();
 
       for(var i=1; i<= candidatesCount; i++){
         electionInstance.candidates(i).then(function(candidate){
@@ -75,11 +75,15 @@ App = {
           var candidateTemplate = "<tr><th>"+id+"</th><th>"+name+"</th><th>"+votecount+"</th></tr>";
           candidatesResults.append(candidateTemplate);
 
-          var candidateOption = "<option value='"+id+"' >"+name+"</option>";
-          candidatesSelect.append(candidateOption);
+          //var candidateOption = "<option value='"+id+"' >"+name+"</option>";
+          //candidatesSelect.append(candidateOption);
         });
       }
-      return electionInstance.voters(App.account);
+
+      loader.hide();
+      content.show();
+      
+      /*return electionInstance.voters(App.account);
     }).then(function(hasVoted){
       if(hasVoted){
         $('form').hide();
@@ -87,7 +91,7 @@ App = {
       loader.hide();
       content.show();
     }).catch(function(error){
-      console.warn(error);
+      console.warn(error); */
     });
   },
 

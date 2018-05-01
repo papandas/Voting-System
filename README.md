@@ -9,6 +9,7 @@ metamask
 All the Rules:
 =============
 Voter can vote one time in the election.
+Record that Voter has voted.
 Voter can not vote twice.
 Voter has to have enough balance
 
